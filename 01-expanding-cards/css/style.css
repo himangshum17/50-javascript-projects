@@ -32,6 +32,7 @@ img {
   border-radius: 16px;
   overflow: hidden;
   transition: flex 0.8s ease-in-out;
+  cursor: pointer;
 }
 .container .item img {
   height: 100%;
