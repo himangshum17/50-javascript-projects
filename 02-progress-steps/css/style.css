@@ -8,4 +8,93 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
+/* conatiner */
+.container {
+  width: 100%;
+  max-width: 640px;
+  padding: 0 16px;
+  text-align: center;
+}
+.container .progress-container .top-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.container .progress-container .top-part::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #c5c5c5;
+  z-index: -1;
+}
+.container .progress-container .progress {
+  position: absolute;
+  width: 0;
+  height: 4px;
+  border-radius: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1956fd;
+  z-index: -1;
+  transition: all 0.4s ease-in-out;
+}
+.container .progress-container .circle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 100%;
+  border: 3px solid #c5c5c5;
+  transition: all 0.4s ease-in-out;
+}
+.container .progress-container .circle.active {
+  border-color: #1956fd;
+}
+.container .progress-container .content-wrapper .content {
+  min-height: 320px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #c5c5c5;
+  border-radius: 4px;
+  margin-top: 24px;
+}
+.container .progress-container .content-wrapper .content.active {
+  display: flex;
+}
+.container .buttons {
+  margin-top: 40px;
+}
+.container .buttons button {
+  background-color: #1956fd;
+  cursor: pointer;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: #ffffff;
+  margin: 0 4px;
+}
+.container .buttons button:disabled {
+  background-color: #c5c5c5;
+  cursor: not-allowed;
+}
+.container .buttons button:active {
+  transform: scale(0.98);
+}
+.container .buttons button:focus {
+  outline: none;
+}
+/* conatiner */
