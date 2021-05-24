@@ -16,6 +16,7 @@ body {
   bottom: 0;
   left: 0;
   width: 240px;
+  transition: all 0.4s ease-in-out;
   transform: translateX(-100%);
 }
 #navigation.active {
@@ -78,6 +79,7 @@ body {
 .container {
   max-width: 1024px;
   margin: 80px auto 0;
+  padding: 0 16px;
 }
 .container h2 {
   font-size: 32px;
