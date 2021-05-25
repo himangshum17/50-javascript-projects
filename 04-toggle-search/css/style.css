@@ -8,4 +8,56 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.4;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99a8ff;
 }
+/* search */
+.search {
+  display: flex;
+  align-items: center;
+  width: 48px;
+  position: relative;
+  transition: width 0.4s ease-in-out;
+  background-color: #ffffff;
+}
+.search #search-input {
+  height: 48px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 0;
+  transition: all 0.4s ease-in-out;
+  width: 0;
+}
+.search #search-input:focus {
+  outline: none;
+}
+.search.active {
+  width: 240px;
+}
+.search.active #search-input {
+  width: 100%;
+  padding-right: 48px;
+}
+.search .search-btn {
+  height: 48px;
+  width: 48px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3f3f3f;
+  background-color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.search .search-btn svg {
+  height: 24px;
+  width: 24px;
+}
+/* search */
