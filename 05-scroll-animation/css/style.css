@@ -8,4 +8,34 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.4;
+  overflow-x: hidden;
 }
+/* container */
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .box {
+  display: flex;
+  height: 240px;
+  width: 304px;
+  padding: 16px;
+  background-color: cadetblue;
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin: 16px 0;
+  font-size: 32px;
+  font-weight: 700;
+  transition: all 0.8s ease-in-out;
+  transform: translate(4000px);
+}
+.container .box:nth-child(even) {
+  transform: translate(-4000px);
+}
+.container .box.show {
+  transform: translate(0);
+}
+/* container */
