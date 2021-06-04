@@ -9,7 +9,7 @@ function wavyLabels() {
       .map((letter, i) => {
         let spanEl = document.createElement('span');
         spanEl.style.transitionDelay = `${i * 48}ms`;
-        spanEl.textContent = `${letter}`;
+        spanEl.textContent = letter;
         label.append(spanEl);
       })
       .join('');
