@@ -6,3 +6,4 @@
 4. Toggle Search
 5. Scroll Animation
 6. Wave Label
+7. Sound Board
