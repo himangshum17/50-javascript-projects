@@ -7,3 +7,4 @@
 5. Scroll Animation
 6. Wave Label
 7. Sound Board
+8. Dad Jokes
