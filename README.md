@@ -8,3 +8,4 @@
 6. Wave Label
 7. Sound Board
 8. Dad Jokes
+9. Event Keycodes
