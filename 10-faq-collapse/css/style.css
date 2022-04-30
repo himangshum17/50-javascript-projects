@@ -8,4 +8,56 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.4;
+  display: grid;
+  place-content: center;
+  padding: 80px 16px;
 }
+/* faq-container */
+.faq-container {
+  margin-top: 64px;
+  display: grid;
+  gap: 24px;
+}
+.faq-container .faq {
+  padding: 24px;
+  border: 2px solid #c0c0c0;
+  border-radius: 12px;
+  position: relative;
+}
+.faq-container .faq .faq-title {
+  font-size: 24px;
+}
+.faq-container .faq .faq-title + .faq-text {
+  margin-top: 16px;
+}
+.faq-container .faq .faq-text {
+  display: none;
+}
+.faq-container .faq.active .faq-text {
+  display: block;
+}
+.faq-container .faq .faq-text + .faq-text {
+  margin-top: 12px;
+}
+.faq-container .faq button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.faq-container .faq button .fa-times {
+  display: none;
+}
+.faq-container .faq.active button .fa-times {
+  display: block;
+}
+.faq-container .faq.active button .fa-chevron-down {
+  display: none;
+}
+/* faq-container */
