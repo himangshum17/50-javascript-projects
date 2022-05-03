@@ -1,5 +1,6 @@
 const tagsEl = document.querySelector('#tags');
 const textAreaEl = document.querySelector('textarea');
+const reloadBtn = document.querySelector('.reload');
 
 // focusing the textarea
 textAreaEl.focus();
@@ -13,8 +14,12 @@ const createTags = input => {
   tagsEl.innerText = '';
   tags.forEach(tag => {
     const tagEl = document.createElement('span');
+    const delBtn = document.createElement('button');
     tagEl.classList.add('tag');
     tagEl.textContent = tag;
+    delBtn.classList.add('delete');
+    delBtn.textContent = 'X';
+    tagEl.append(delBtn);
     tagsEl.append(tagEl);
   });
 };
@@ -36,7 +41,7 @@ const pickRandomTag = () => {
 };
 
 // Selecting the random tags
-const randomTagsSelect = () => {
+const randomTagsSelect = callback => {
   const times = 30;
   const interval = setInterval(() => {
     const randomTag = pickRandomTag();
@@ -54,9 +59,22 @@ const randomTagsSelect = () => {
       const randomTag = pickRandomTag();
       hightLightTags(randomTag);
       party.confetti(randomTag);
+      setTimeout(() => {
+        callback();
+      }, 2000);
     }, 100);
   }, times * 100);
 };
+
+const reloadBtnHandler = () => {
+  reloadBtn.classList.add('visible');
+};
+reloadBtn.addEventListener('click', function () {
+  tagsEl.innerText = '';
+  setTimeout(() => {
+    this.classList.remove('visible');
+  }, 200);
+});
 
 // eventlisting on textarea
 textAreaEl.addEventListener('keyup', e => {
@@ -65,6 +83,6 @@ textAreaEl.addEventListener('keyup', e => {
     setTimeout(() => {
       e.target.value = '';
     }, 10);
-    randomTagsSelect();
+    randomTagsSelect(reloadBtnHandler);
   }
 });
