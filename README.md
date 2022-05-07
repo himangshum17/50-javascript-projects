@@ -13,3 +13,4 @@
 9. Event Keycodes - [Live URL](https://himangshum17-js-projects.netlify.app/09-event-keycodes/)
 10. FAQ - [Live URL](https://himangshum17-js-projects.netlify.app/10-faq-collapse/)
 11. Random Choice Picker - [Live URL](https://himangshum17-js-projects.netlify.app/11-random-choice-picker/)
+12. Increment Counter - [Live URL](https://himangshum17-js-projects.netlify.app/12-increment-counter/)
