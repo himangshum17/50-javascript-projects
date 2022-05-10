@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  line-height: 1.4;
+}
+/* clock */
+.clock-container {
+  height: 100vh;
+  width: 100%;
+  padding: 0 16px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.clock {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  background-image: url('../images/clock-bg.png');
+  background-size: 100% 100%;
+  margin: auto;
+}
+.needle {
+  position: absolute;
+  width: 4px;
+  background-color: black;
+  height: 72px;
+  top: 50%;
+  left: 50%;
+  border-radius: 4px;
+  transform-origin: bottom center;
+}
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 96px;
+}
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 96px;
+  background-color: coral;
+}
+.center-point {
+  background-color: coral;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center-point::after {
+  content: '';
+  background-color: black;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.time {
+  font-size: 64px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+.date {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: lightslategray;
+}
+/* clock */
